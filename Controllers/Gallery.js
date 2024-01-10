@@ -139,3 +139,57 @@ exports.DeletePhoto = async (req, res) => {
   }
 };
 
+
+
+// Controller function for creating a new post
+exports.UpdatePost = async (req, res) => {
+  let { id } = req.body ;
+  try {
+    // Update a  post in the Gallery model using data from the request body
+    Gallery.updateOne({_id:id},req.body).then(result => {
+      res.status(201).json({
+        message: "Post Updated Successfully!!!",
+        data: result
+      });
+    })
+      .catch(err => {
+        res.status(500).json({
+          message: "Error in database",
+          error: err
+        });
+      });
+  } catch (error) {
+    res.status(500).json({
+      message: "Error in database",
+      error: error
+    });
+  }
+};
+
+exports.DeletePost = async (req, res) => {
+  let { id } = req.body ;
+  try {
+    // Update a  post in the Gallery model using data from the request body
+    Gallery.deleteOne({_id:id}).then(result => {
+      res.status(201).json({
+        message: "Post Deleted Successfully!!!",
+        data: result
+      });
+    })
+      .catch(err => {
+        res.status(500).json({
+          message: "Error in database",
+          error: err
+        });
+      });
+  } catch (error) {
+    res.status(500).json({
+      message: "Error in database",
+      error: error
+    });
+  }
+};
+
+
+
+

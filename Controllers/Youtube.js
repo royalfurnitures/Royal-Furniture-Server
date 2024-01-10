@@ -72,6 +72,60 @@ exports.createYoutubeVideo = (req, res) => {
   
   };
 
+exports.updateYoutubeVideo = (req, res) => { 
+    let data = {
+        YoutubeVideoID: req.body.VideoID,
+        YoutubeVideoTitle: req.body.title
+    };
+  
+    // Check if the video with the given ID already exists
+    Youtube.updateOne({ _id: req.body.id }, data)
+    .then(existingVideo => {
+      if (existingVideo) {
+        return res.status(201).json({
+          message: "update successfully",
+          isSuccess: true
+        });
+      }
+    })
+     
+    .catch(err => {
+      res.status(500).json({
+        message: "Error updating video",
+        error: err,
+        isSuccess: false
+      });
+    });
+  
+  };
+
+  exports.deleteYoutubeVideo = (req, res) => { 
+    let { id } = req.body ;
+    // console.log("Data:", data);
+  
+    // Check if the video with the given ID already exists
+    Youtube.deleteOne({ _id: id })
+    .then(existingVideo => {
+      if (existingVideo) {
+        // Video with the same ID already exists
+        return res.status(201).json({
+          message: "Video Delete Successfully",
+          isSuccess: true
+        });
+      }
+  
+     
+    })   
+    .catch(err => {
+      res.status(500).json({
+        message: "Error delete video",
+        error: err,
+        isSuccess: false
+      });
+    });
+  
+  };
+
 // Controller function for fetching all YouTube videos
 exports.GetVideoData = (req, res) => {
     // Fetch all data from the Youtube model
