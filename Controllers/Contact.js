@@ -29,3 +29,12 @@ exports.RegisterContact = (req, res) => {
             });
         });
 }
+
+exports.GetAllContacts = (req,res)=>{
+       Contact.find().then(result=>{
+        res.status(200).json({message:"contact data get successfully",data:result})
+       })
+       .catch(err=>{
+        res.status(500).json({message:"Errror in database",error:err})
+       })
+} 

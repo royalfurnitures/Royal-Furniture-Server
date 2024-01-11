@@ -5,10 +5,11 @@ const express = require('express');
 const router = express.Router();
 
 // Importing the RegisterContact function from the Contact controller
-const { RegisterContact } = require('../Controllers/Contact');
+const { RegisterContact, GetAllContacts } = require('../Controllers/Contact');
 
 // Defining a POST route '/register-contact' that uses the RegisterContact function
 router.post('/register-contact', RegisterContact);
+router.get('/get-all-contacts', GetAllContacts);
 
 // Exporting the router for use in other modules
 module.exports = router;
