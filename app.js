@@ -18,7 +18,7 @@ const EdufurnGallertyRoutes = require('./routes/Edufurn');
 // Creating an express application
 const app = express();
 const PORT = process.env.PORT || 7878;
-const allowedOrigins = ['http://localhost:3000',"https://royalinteriorstesting.netlify.app/"];
+const allowedOrigins = ['http://localhost:3000',"https://royalinteriorstesting.netlify.app/","https://royalfurniturestesting.netlify.app/"];
   
 // Setting up middleware  
 app.use(bodyParser.urlencoded({ extended: false }));
