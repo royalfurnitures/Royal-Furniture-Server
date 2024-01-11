@@ -38,3 +38,14 @@ exports.GetAllContacts = (req,res)=>{
         res.status(500).json({message:"Errror in database",error:err})
        })
 } 
+
+
+exports.DeleteContact = (req,res)=>{
+    let {id} = req.parmas.id
+    Contact.deleteOne({_id:id}).then(result=>{
+     res.status(200).json({message:"contact data get successfully",data:result})
+    })
+    .catch(err=>{
+     res.status(500).json({message:"Errror in database",error:err})
+    })
+} 
