@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "royalfurnitures-ba1c7",
+  "private_key_id": "be2b1936484d9e7811099ddf164ad3dfb5c010f0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCmywfzVar1+U/9\nFK+HPYeoZsX6QRnERG+Mi2b8AedoU0xMkljCsMWk5r5o5izit0S9wJ83jggA7cvo\nVP2Vu1561PWOIzhC992qM32labz5DXmsoolEGbj4yJSv6+Z9zE7GPn39h5EhJMii\noEpvH0uOD9RArzUWse7eZs4EMaq6ASR7UN4C5XpiXiIQUrwYl3WFqa+A2uwvxJjn\n/d9r9tAXib8ww1Q3hf++aQJNvKJJ15vL8cCozhysdQCEMJsDUMiZjpwZmRy3e38m\n2XYdpTM1CiWD0aZsSbj+hQWHNOb5+HBbAIoz7tWn9xUTH+EGrN3/G5k+5kFvvz9B\nEYDdiZDrAgMBAAECggEAE4FKvLoX9AvjvsTcggRACQF7xXg3eyxFnznuISpX1Wto\nUMwMdTgW5OHXAo1oUlr8PvR3qheB+BnW7qSBwzDWK6cb0DNuMOarlWvQFbf30Wgy\nAm4/fydC6lUKjkgX/D4YODa2pR9laWrTy7DTA4u1WjefqrDSlITaWkfLb9IfFQE8\nrV4gr4jb7ME/KxMYOUGkPY6RQGg/yMfw4JUpzhYV6iKFkH92+CrLDG/x8y6hjEtv\nFkWuE6J4S/O0/fMlFlOSFoV3WIj547yJlQkwyf8W1Ffb0mXCCgzPmF8G+uMHUb1h\nacCzBD8JqwvZ5+7Usd0ua5CnG7IMqZB93O25tqtFgQKBgQDh5Sv8FKdMAF4d1KUX\njLaJOeIYQwsGhste9wEH62SmEgMAsxir/5sp9lxFd+kB/zBd+4csV3cdsXJYZ72g\nxMJJAuA9JMlelnTvnonoLICf2u3q7e3r7jv9ZbNf61N4eJSvmkkWlrhl8zg9dOYn\nkcbBFtaKFyJl96jW/d+kHVUkXQKBgQC9BXuHJxwg1Yj4mSGB7eMk+WGNHwgB84m9\nIWuo5ZXFicmPW9QYMoOUVmE77dt8HmUf0/+LdJhVnRTL3RzUhEernE7GtKrI7YEJ\n3kOaILZztHnAY5lKzKfdoOGztTMg2fNp7ySWMB3r5TIeCeRTWqX4RdQznqQLtz9P\nw5v+zwC15wKBgBsz0bwlcJACa1METG0tkL2trsBlMmqyyMLC0+j0O8aT3LC04H+1\n5CWFeU8URYbsCBMJOxnn3nxA5hgnRfqaNxs7sW0rhORTEfnZCZpf4Y1ee9ASntgO\ndELrgFJIsGCNhLowxiRmOgZs55TfAug48cpGyccPSiElVbuuDsRgk+QxAoGAVvy+\n7GPDPhkG/+D42qJvdgSOMDOnq744FSHcOc3uLwpKB/9qi/gzNYDLHplH+MbEIvGd\nGMB/mma/u1H2gpadpQw59JgQQIeMas4uri9/x5+2qCMt2I52cjgnplwtO2ER9B5p\n5/Qc0QKZHdnPicydtLPuBBNtyzZ5nGuYzprU6OECgYBsfk6BzdEVQj5OfGpp8JnG\nXbYKvwl3EVWLB2loxq4gmJrZ+r36OGM/k5md4zFfKh5P4UCrFhKNgarReBmobNuA\n65pAChJZ7ctOZ238/zUQphYf97uBfO4AjuMv5y4vapF6aWaaYfFGGNNJZmH5pbyc\nRvHN7pQDa+X6lPbcFgz5pg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-na100@royalfurnitures-ba1c7.iam.gserviceaccount.com",
+  "client_id": "106433199273301900088",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-na100%40royalfurnitures-ba1c7.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

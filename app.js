@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-require('dotenv').config();
+require('dotenv').config();   
 
 // Importing route modules
 const AuthRoutes = require('./routes/Auth');
@@ -19,15 +19,15 @@ const EdufurnGallertyRoutes = require('./routes/Edufurn');
 const app = express();
 const PORT = process.env.PORT || 7878;
 const allowedOrigins = ['http://localhost:3000',"https://royalinteriorstesting.netlify.app/"];
-
-// Setting up middleware
+  
+// Setting up middleware  
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(cors({ origin : allowedOrigins }));
 
-// Database connection
+// Database connection 
 mongoose.connect(process.env.MONGOURI);
-
+ 
 // Event handlers for database connection
 mongoose.connection.once("open", () => {
   console.log("Database connected successfully");

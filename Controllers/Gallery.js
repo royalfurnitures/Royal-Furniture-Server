@@ -32,8 +32,8 @@ exports.uploadImage = async (req, res) => {
         stream.on('finish', () => {
           fileUpload.getMetadata()
             .then((metadata) => {
-              const Url = "https://firebasestorage.googleapis.com/v0/b/contentcreator-ddc7a.appspot.com/o/Photoname?alt=media&token=220e59bd-0243-4c14-b8a5-63b6687ea539";
-
+              // const Url = "https://firebasestorage.googleapis.com/v0/b/contentcreator-ddc7a.appspot.com/o/Photoname?alt=media&token=1dd9c17c-f245-4103-9177-28980c5c0cd5";
+              const Url = "https://firebasestorage.googleapis.com/v0/b/royalfurnitures-ba1c7.appspot.com/o/Photoname?alt=media&token=1dd9c17c-f245-4103-917"
               const Filename = metadata[0].name;
               const bucket = metadata[0].bucket;
               const generation = metadata[0].generation;
