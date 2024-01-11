@@ -41,9 +41,11 @@ exports.GetAllContacts = (req,res)=>{
 
 
 exports.DeleteContact = (req,res)=>{
-    let {id} = req.parmas.id
-    Contact.deleteOne({_id:id}).then(result=>{
-     res.status(200).json({message:"contact data get successfully",data:result})
+    let {id} = req.params
+    // console.log("id",id);
+        Contact.deleteOne({ _id: id }).then(result=>{
+        // console.log("result",result);
+     res.status(200).json({message:"contact deleted successfully",data:result})
     })
     .catch(err=>{
      res.status(500).json({message:"Errror in database",error:err})
