@@ -14,6 +14,7 @@ const InterioGallertyRoutes = require('./routes/Interio');
 const ModularGallertyRoutes = require('./routes/Modular');
 const MedifurnGallertyRoutes = require('./routes/Medifurn');
 const EdufurnGallertyRoutes = require('./routes/Edufurn');
+const ShopfitRoutes = require('./routes/Shopfit');
 
 // Creating an express application
 const app = express();
@@ -55,6 +56,7 @@ app.use('/api/interiogallery', InterioGallertyRoutes);
 app.use('/api/modulargallery', ModularGallertyRoutes);
 app.use('/api/medifurngallery', MedifurnGallertyRoutes);
 app.use('/api/edufurngallery', EdufurnGallertyRoutes);
+app.use('/api/shopfitgallery', ShopfitRoutes);
 
 // Starting the server
 app.listen(PORT, () => {
