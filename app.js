@@ -57,7 +57,7 @@ app.use('/api/modulargallery', ModularGallertyRoutes);
 app.use('/api/medifurngallery', MedifurnGallertyRoutes);
 app.use('/api/edufurngallery', EdufurnGallertyRoutes);
 app.use('/api/shopfitgallery', ShopfitRoutes);
-
+    
 // Starting the server
 app.listen(PORT, () => {
   console.log("Server running on port:", PORT);
