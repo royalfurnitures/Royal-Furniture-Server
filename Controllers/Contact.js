@@ -10,6 +10,27 @@ exports.RegisterContact = (req, res) => {
         MobileNo: req.body.MobileNo,
         Pincode: req.body.Pincode
     };
+try{
+    const phoneRegex = /^\d{10}$/;
+
+    const nameRegex = /^[a-zA-Z\s]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const pincodeRegex = /^\d{6}$/;
+
+
+
+ let isPhoneDataTrue = phoneRegex.test(req.body.MobileNo);
+let isNameDataTrue = nameRegex.test(req.body.Name);
+let isEmailDataTrue = emailRegex.test(req.body.Email);
+let isPincodeDataTrue = pincodeRegex.test(req.body.Pincode);
+
+if (!isPhoneDataTrue || !isNameDataTrue || !isEmailDataTrue || !isPincodeDataTrue) {
+    return res.status(401).json({
+        message: "Please fill the details correctly",
+        isRegistered: false
+    });
+}
+
 
     // Create a new entry in the Contact model with the provided data
     Contact.create(data).then(result => {
@@ -28,6 +49,14 @@ exports.RegisterContact = (req, res) => {
                 isRegistered: false
             });
         });
+    }
+    catch (err){
+        res.status(500).json({
+            message: "Error in Database !!!",
+            error: err,
+            isRegistered: false
+        });
+    }
 }
 
 exports.GetAllContacts = (req,res)=>{

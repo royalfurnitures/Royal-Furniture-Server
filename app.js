@@ -15,6 +15,7 @@ const ModularGallertyRoutes = require('./routes/Modular');
 const MedifurnGallertyRoutes = require('./routes/Medifurn');
 const EdufurnGallertyRoutes = require('./routes/Edufurn');
 const ShopfitRoutes = require('./routes/Shopfit');
+const BlogRoutes = require('./routes/Blog');
 
 // Creating an express application
 const app = express();
@@ -57,7 +58,8 @@ app.use('/api/modulargallery', ModularGallertyRoutes);
 app.use('/api/medifurngallery', MedifurnGallertyRoutes);
 app.use('/api/edufurngallery', EdufurnGallertyRoutes);
 app.use('/api/shopfitgallery', ShopfitRoutes);
-
+app.use('/api/blog', BlogRoutes);
+    
 // Starting the server
 app.listen(PORT, () => {
   console.log("Server running on port:", PORT);
