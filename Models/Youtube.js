@@ -7,7 +7,11 @@ const YoutubeSchema = mongoose.Schema({
                          YoutubeVideoTitle:{
                                        type:String,
                                        required:true
-                         }
+                         },
+                         Category:{
+                            type:String,
+                            required:true
+                          },
 },{timestamps:true});
 
 module.exports =mongoose.model("Youtube",YoutubeSchema,"Youtube")

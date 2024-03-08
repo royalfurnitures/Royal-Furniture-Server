@@ -33,7 +33,8 @@ exports.YoutubeIDExcrator = (req,res)=>{
 exports.createYoutubeVideo = (req, res) => { 
     let data = {
         YoutubeVideoID: req.body.VideoID,
-        YoutubeVideoTitle: req.body.title
+        YoutubeVideoTitle: req.body.title,
+        Category:req.body.Category
     };
   
     // console.log("Data:", data);
@@ -75,7 +76,8 @@ exports.createYoutubeVideo = (req, res) => {
 exports.updateYoutubeVideo = (req, res) => { 
     let data = {
         YoutubeVideoID: req.body.VideoID,
-        YoutubeVideoTitle: req.body.title
+        YoutubeVideoTitle: req.body.title,
+        Category:req.body.Category
     };
   
     // Check if the video with the given ID already exists
@@ -129,7 +131,13 @@ exports.updateYoutubeVideo = (req, res) => {
 // Controller function for fetching all YouTube videos
 exports.GetVideoData = (req, res) => {
     // Fetch all data from the Youtube model
-    Youtube.find().then(result => {
+    let filter = {}
+      //  console.log("req.params.query !== null",req.params.query !== null)
+        if(req.params.query !== "null"){
+             filter.Category = req.params.query ;
+         }
+  console.log("filter",filter)
+    Youtube.find(filter).then(result => {
         // Respond with a 200 status code and JSON containing the retrieved video data
         res.status(200).json({
             message: "Get all Videos !!!",

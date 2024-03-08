@@ -54,8 +54,10 @@ exports.GetBlogsbyModules = (req,res)=>{
          res.status(505).json({ message : "Error in Get data from database",isSuccess:false,error:err })
     })
 }
+
 exports.GetBlogsbyModulesandCategory = (req,res)=>{
     let { moduleName , subType } = req.params;
+    console.log(" moduleName , subType", moduleName , subType); 
     Blog.find({category:moduleName,subType}).then(result=>{
          res.status(200).json({ message:"Get data Successfully",data:result,isSuccess:true })
     })
@@ -63,6 +65,7 @@ exports.GetBlogsbyModulesandCategory = (req,res)=>{
          res.status(505).json({ message : "Error in Get data from database",isSuccess:false,error:err })
     })
 }
+
 exports.GetBlogsbyid = (req,res)=>{
     let { id } = req.params;
     Blog.find({_id:id}).then(result=>{

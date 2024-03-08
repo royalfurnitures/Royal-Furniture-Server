@@ -11,7 +11,7 @@ const { CreatePost ,GetAllPhotos , DeletePost , UpdatePost } = require('../Contr
 
 // Defining routes for image-related operations
 router.post('/create-post', CreatePost);
-router.get('/get-all-post', GetAllPhotos);
+router.get('/get-all-post/:query', GetAllPhotos);
 router.post('/update-post', UpdatePost);
 router.post('/delete-post', DeletePost);
 

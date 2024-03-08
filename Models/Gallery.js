@@ -7,7 +7,11 @@ const GallerySchema = mongoose.Schema({
                          Title:{
                              type:String,
                              required:true
-                         },
+                         },                         
+                        Category:{
+                            type:String,
+                            required:true
+                        },
                          
 },{timestamps:true});
 

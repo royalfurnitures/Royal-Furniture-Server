@@ -17,7 +17,7 @@ const upload = multer({ storage: storage });
 // Defining routes for image-related operations
 router.post('/upload', upload.array('files', 20), imageController.uploadImage);
 router.post('/create-post', imageController.CreatePost);
-router.get('/get-all-post', imageController.GetAllPhotos);
+router.get('/get-all-post/:query', imageController.GetAllPhotos);
 router.post('/delete-photo', imageController.DeletePhoto);
 router.post('/update-post', imageController.UpdatePost);
 router.post('/delete-post', imageController.DeletePost);
