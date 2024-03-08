@@ -12,7 +12,7 @@ router.post('/GetVideoID', YoutubeIDExcrator);
 router.post('/createvideo', createYoutubeVideo);
 router.post('/updatevideo', updateYoutubeVideo);
 router.post('/deletevideo', deleteYoutubeVideo);
-router.get('/getvideodata', GetVideoData);
+router.get('/getvideodata/:query', GetVideoData);
 
 // Exporting the router for use in other modules
 module.exports = router;

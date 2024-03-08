@@ -65,6 +65,7 @@ exports.uploadImage = async (req, res) => {
 
 // Controller function for creating a new post
 exports.CreatePost = async (req, res) => {
+  
   try {
     // Create a new post in the Gallery model using data from the request body
     Gallery.create(req.body).then(result => {
@@ -91,8 +92,12 @@ exports.CreatePost = async (req, res) => {
 // Controller function for fetching all photos
 exports.GetAllPhotos = async (req, res) => {
   try {
+    let filter = {}
+  if(req.params.query !== "null"){
+      filter.Category = req.params.query ;
+  }
     // Fetch all data from the Gallery model
-    Gallery.find().then(result => {
+    Gallery.find(filter).then(result => {
       res.status(200).json({
         message: "Get data successfully",
         data: result
