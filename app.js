@@ -20,7 +20,7 @@ const BlogRoutes = require('./routes/Blog');
 // Creating an express application
 const app = express();
 const PORT = process.env.PORT || 7878;
-const allowedOrigins = ['http://localhost:3000',"https://royalinteriorstesting.netlify.app","https://royalfurniturestesting.netlify.app"];
+const allowedOrigins = ['http://localhost:3000',"https://royalinteriorstesting.netlify.app","https://royalfurniturestesting.netlify.app","https://royalfurn.in"];
   
 // Setting up middleware  
 app.use(bodyParser.urlencoded({ extended: false }));
