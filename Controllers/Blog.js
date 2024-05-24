@@ -66,6 +66,7 @@ exports.GetBlogsbyModulesandCategory = (req,res)=>{
     })
 }
 
+
 exports.GetBlogsbyid = (req,res)=>{
     let { id } = req.params;
     Blog.find({_id:id}).then(result=>{
